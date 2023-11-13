@@ -28,6 +28,7 @@ if ($resultado->num_rows > 0) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/perfil.css" />
     <title>Perfil</title>
 </head>
 <body>
@@ -43,5 +44,7 @@ if ($resultado->num_rows > 0) {
     <p><a href="alterar.php">Alterar dados do cadastro</a></p>
     <p><a href="excluir.php">Excluir cadastro</a></p>
     <p><a href="logout.php">Sair</a></p>
+    <br></br>
+    <p><a href="index.html">Ir para a pagina principal</a></p>
 </body>
 </html>

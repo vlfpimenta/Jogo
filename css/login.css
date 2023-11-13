@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  h1 {
+    margin-top: 11%;
+  }
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #1d2b3a;
+  }
+  .container {
+    text-align: center;
+    color: white;
+    width: 450px;
+    height: 320px;
+    position: relative;
+    background: rgb(178, 146, 234);
+    padding: 20px 10px 10px;
+    border-radius: 10px;
+  }
+  .name {
+    margin-bottom: 20px;
+  }
+  
+  .links {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .links a {
+    margin: 10px 0;
+    font-size: 0.75em;
+    color: #e4e4e4;
+    margin-top: 10%;
+    margin-left: 13%;
+    text-decoration: none;
+  }
+  
+  .links a:hover {
+    color: black;
+  }
+  .inputFields {
+    position: relative;
+    width: 250px;
+    margin-top: 5%;
+    margin-left: 7.5%;
+  }
+  .inputFields input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #10081e;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+  }
+  .inputFields span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  
+  .inputFields input:valid ~ span,
+  .inputFields input:focus ~ span {
+    color: #9b188c;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #261d3a;
+    border-left: 1px solid #b600df;
+    border-right: 1px solid #c500df;
+  }
+  
+  .button1 {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #311d3a;
+  }
+  .button1:hover{
+    background: #6400df;
+    color: black;
+  }
+  .button1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.8s;
+  }
+  .button1:hover::before{
+    height: 180%;
+  }
+  .container2 {
+    text-align: center;
+    color: white;
+    width: 500px;
+    height: 850px;
+    position: relative;
+    background: rgb(178, 146, 234);
+    padding: 10px 10px 10px;
+    border-radius: 10px;
+  }
+  .box{
+    position: relative;
+    width: 300px;
+    margin-top: 5%;
+    margin-left: 7.5%;
+  }
+  .box input{
+    width: 125%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #2a1d3a;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    font-size: 1em;
+    margin-top: 5%;
+  }
+  .box span{
+    position: relative;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color: rgba(255, 255, 255, 0.25);
+    text-transform: uppercase;
+    transition: 0.5s;
+  }
+  
+  .box input:valid ~ span,
+  .box input:focus ~ span {
+    color: #ed75ff;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #391d3a;
+    border-left: 1px solid #4e00df;
+    border-right: 1px solid #9500df;
+  }
+  
+  .button2 {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    color: rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #3a1d33;
+    margin-top: 5%;
+  }
+  .button2:hover{
+    background: #cd00df;
+    color: black;
+  
+  }
+  .button2::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    z-index: -1;
+    transition: 0.8s;
+    background: #da45ff;
+    color: rgba(255, 255, 255, 0.25);
+  }
+  
+  .button2:hover::after{
+    top: 0%;
+    border-radius: 10px;
+  }
+  
+  .links2{
+    margin-top: 6%;
+  }
+  .links2 a{
+    color: #be00df;
+    text-decoration: none;
+  }
+  
+  .links2 a:hover {
+    color: black;
+  }
+  .secondH1{
+    margin-top: -5%;
+  }
+  
+  .showPassword{
+    color: #d000df;
+  }
+  form i {
+    margin-left: -30px;
+    cursor: pointer;
+  }

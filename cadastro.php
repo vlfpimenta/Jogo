@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $sql = "INSERT INTO usuarios (user_id, username, password, email, nickname, image_path) VALUES ('$random_id', '$username', '$hashed_password', '$email', '$nickname', '$image_path')";
 
                 if ($conexao->query($sql) === TRUE) {
-                    header("Location: index.php");
+                    header("Location: perfil.php");
                 } else {
                     echo "Erro no cadastro: " . $conexao->error;
                 }
@@ -43,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login2.css" />
     <title>Cadastro</title>
     <script>
         function togglePassword() {
@@ -60,32 +61,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
 </head>
 <body>
-    <h2>Cadastro de Usuário</h2>
-    <form method="post" action="cadastro.php" enctype="multipart/form-data">
-        <label for="username">Usuário:</label>
-        <input type="text" name="username" required><br><br>
+    <div class="container2">
+    <h1>Cadastro de Usuário</h1>
+    <div class="box">
+        <form method="post" action="cadastro.php" enctype="multipart/form-data">
+            <label for="username">Usuário:</label>
+            <input type="text" name="username" required><br><br>
 
-        <label for="password">Senha:</label>
-        <input type="password" name="password" id="password" required><br><br>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" required><br><br>
 
-        <label for="confirm_password">Confirmar Senha:</label>
-        <input type="password" name="confirm_password" id="confirm_password" required><br><br>
+            <label for="confirm_password">Confirmar Senha:</label>
+            <input type="password" name="confirm_password" id="confirm_password" required><br><br>
+            <label for="show_password">Exibir Senhas:</label>
+            <input type="checkbox" id="show_password" onclick="togglePassword()"><br><br>
 
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" required><br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" required><br><br>
 
-        <label for="nickname">Nickname:</label>
-        <input type="text" name="nickname" required><br><br>
+                <label for="nickname">Nickname:</label>
+                <input type="text" name="nickname" required><br><br>
 
-        <label for="show_password">Exibir Senhas:</label>
-        <input type="checkbox" id="show_password" onclick="togglePassword()"><br><br>
+                <label for="image">Imagem:</label>
+                <input type="file" name="image" accept="image/*" required><br><br>
 
-        <label for="image">Imagem:</label>
-        <input type="file" name="image" accept="image/*" required><br><br>
+                <input type="submit" value="Cadastrar"><br></br>
 
-        <input type="submit" value="Cadastrar">
+                <p><a href="login.php">Voltar para o inicio</a></p>
+            </form>
+        </div>
+    </div>
 
-        <p><a href="index.php">Voltar para o inicio</a></p>
-    </form>
 </body>
 </html>
